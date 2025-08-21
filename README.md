@@ -46,7 +46,7 @@ A simple, responsive, and dynamic full-stack e-commerce web application where us
    git clone https://github.com/your-username/namaskar-store.git
    cd Indibuy
 
-2. **Install server dependencies:**
+3. **Install server dependencies:**
    
    npm install
 
@@ -59,7 +59,7 @@ A simple, responsive, and dynamic full-stack e-commerce web application where us
 6. **Open index.html in browser**
 
 
- 📌** Future Enhancements**
+ 📌 **Future Enhancements**
 
 * User login & signup
 * Checkout system with payment gateway
