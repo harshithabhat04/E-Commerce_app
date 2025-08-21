@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indibuy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="greeting">
+      <span class="namaste">🙏</span>
+      <h2>Hello.. Let's shop!</h2>
+    </div>
+    <div class="icons">
+  <!-- Wishlist Icon -->
+  <a href="wishlist.html" title="Wishlist">
+    <i class="fas fa-heart" style="font-size: 22px; margin-right: 15px; color: crimson; cursor: pointer;"></i>
+  </a>
+
+      <!-- Cart Icon -->
+      <a href="cart.html" title="Cart">
+        <i class="fas fa-shopping-cart" style="font-size: 22px; color: #333; cursor: pointer;"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search by Keyword or Product ID" />
+    <button onclick="searchProducts()">🔍</button>
+  </div>
+
+  <!-- Features Row -->
+  <div class="features-row">
+    <div>📦 7 Days Return</div>
+    <div>💸 Cash on Delivery</div>
+    <div>🏷️ Lowest Price</div>
+  </div>
+
+  <!-- Categories -->
+   <div style="width: 100%; overflow-x: auto;">
+  <div class="categories-scroll">
+    <div class="cat-item" onclick="loadProducts('dressing')">👗<br>Kurtis & Dresses</div>
+    <div class="cat-item" onclick="loadProducts('sarees')">🥻<br>Sarees</div>
+    <div class="cat-item" onclick="loadProducts('children')">🧸<br>Kids & Toys</div>
+    <div class="cat-item" onclick="loadProducts('men')">👔<br>Men’s Wear</div>
+    <div class="cat-item" onclick="loadProducts('electronics')">📱<br>Electronics</div>
+    <div class="cat-item" onclick="loadProducts('stationery')">📚<br>Books & Stationery</div>
+  </div>
+  </div>
+  <!-- Sorting Dropdown -->
+<div class="sort-bar">
+  <label for="sortSelect"> Sort By:</label>
+  <select id="sortSelect" onchange="sortProducts()">
+    <option value="">Default</option>
+    <option value="low-to-high">Price: Low to High</option>
+    <option value="high-to-low">Price: High to Low</option>
+  </select>
+</div>
+
+
+  <!-- Product Grid -->
+  <div id="products" class="product-container">
+    <!-- Product cards will be inserted here by JS -->
+  </div>
+
+  <!-- JS File -->
+  <script src="script.js"></script>
+  <script>
+    // 👇 This will run once the page is fully loaded
+    window.onload = () => {
+      loadProducts(); // Load all products on homepage load
+    };
+  </script>
+</body>
+</html>

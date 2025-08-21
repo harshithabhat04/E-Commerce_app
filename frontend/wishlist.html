@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Wishlist</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h2><span style="color: red;">❤️</span> Your Wishlist</h2>
+
+  <div id="wishlist-items" class="product-container"></div>
+
+  <script>
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+
+    const container = document.getElementById("wishlist-items");
+    if (wishlist.length === 0) {
+      container.innerHTML = "<p>Your wishlist is empty.</p>";
+    } else {
+      wishlist.forEach(product => {
+        const div = document.createElement("div");
+        div.className = "product-card";
+        div.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" />
+          <h4>${product.name}</h4>
+          <p>₹${product.price}</p>
+          <p>${product.description}</p>
+          
+        `;
+        container.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>

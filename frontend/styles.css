@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+   background: linear-gradient(to right, #e48ff3, #f3c083);
+}
+
+.top-header {
+background: linear-gradient(to right, #e48ff3, #f3c083);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+}
+
+.namaste {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.search-bar {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(115, 21, 122);
+  border-bottom: 1px solid #ddd;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #e78a38;
+  color: rgb(241, 231, 231);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.cart-btn {
+  background-color: #e0f0ff;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+.wishlist-btn {
+  background-color: #ffe6ea;
+  color: crimson;
+  border: 1px solid crimson;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  background-color: crimson;
+  color: white;
+}
+
+
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right,#f3c083, #e48ff3 );
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.categories-scroll {
+  display: flex;
+  overflow-x: auto;
+  background-color: rgb(235, 190, 190);
+  padding: 10px;
+  gap: 15px;
+}
+
+.cat-item {
+  min-width: 100px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #f3c3f4;
+  border-radius: 10px;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cat-item:hover {
+  background-color: #c0f5e6;
+}
+
+.product-container {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.product-card {
+  background: rgb(236, 232, 232);
+  padding: 10px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+  flex-shrink: 0;
+  overflow: hidden;
+   
+
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+
+  background-color: #fdfbfb;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-details-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.product-details-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.categories-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  background-color: rgb(115, 21, 122);
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
+.categories-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Chrome */
+}
+
+.cat-item {
+  flex: 1 0 auto; /* Ensure it grows but not too much */
+  min-width: 180px;  /* Increase width */
+  margin: 0 10px;
+  padding: 20px 10px;
+  border-radius: 12px;
+  background: #f1f1f1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.cat-item:hover {
+  background: #daf5f6;
+  transform: scale(1.05);
+}
+.sort-bar {
+  margin: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-bar select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+}
+
+
